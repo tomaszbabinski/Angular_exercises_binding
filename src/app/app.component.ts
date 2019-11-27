@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TouchSequence } from 'selenium-webdriver';
 
 @Component({
@@ -6,11 +6,17 @@ import { TouchSequence } from 'selenium-webdriver';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
+
   title = 'TaskList';
   newTask: string;
   tasksList: Array<string> = [];
   tasksDone: Array<string> = [];
+
+  ngOnInit(): void {
+    this.tasksList = ['Learning Angular', 'swimming', 'cleaning', 'yoga practising', 'shopping'];
+  }
 
   add(task: string) {
     this.tasksList.push(task);

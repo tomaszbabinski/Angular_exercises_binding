@@ -1,0 +1,15 @@
+li {
+  background: lightblue;
+  margin: 5px;
+}
+
+.odd-li {
+  background: rgb(102, 151, 201);
+  margin: 5px;
+}
+
+.last-li {
+  background: pink;
+  margin: 5px;
+}
+
