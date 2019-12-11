@@ -12,11 +12,11 @@ export class TasksService {
   private tasksListDoneObs = new BehaviorSubject<Array<Task>>([]);
 
   constructor() {
-    this.tasksList = [{ name: 'Learning Angular', created: new Date() },
-    { name: 'swimming', created: new Date() },
-    { name: 'cleaning', created: new Date() },
-    { name: 'yoga practising', created: new Date() },
-    { name: 'shopping', created: new Date() }];
+    this.tasksList = [{ name: 'Learning Angular', created: new Date().toLocaleString(), isDone: false },
+    { name: 'swimming', created: new Date().toLocaleString(), isDone: false },
+    { name: 'cleaning', created: new Date().toLocaleString(), isDone: false  },
+    { name: 'yoga practising', created: new Date().toLocaleString(), isDone: false  },
+    { name: 'shopping', created: new Date().toLocaleString(), isDone: false  }];
     this.tasksListObs.next(this.tasksList);
   }
 
